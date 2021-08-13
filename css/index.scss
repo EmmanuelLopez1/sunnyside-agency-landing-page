@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+
+
+//PRIMARY
+$Softred: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$DarkdesaturatedCyan: hsl(167, 40%, 24%);
+$DarkBlue: hsl(198, 62%, 26%);
+$DarkModeratCyan: hsl(168, 34%, 41%);
+
+
+//Neutral
+$VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+$VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+$DarkGrayishBlue: hsl(232, 10%, 55%);
+$GrayishBlue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+//Typography
+$Barlow: 'Barlow', sans-serif;
+$Barlow600: 600;
+$Fraunces:'Fraunces', serif;
+$Fraunces600: 600;
+$Fraunces900:900;
+
+body{
+    font-size: 16px;
+}
+
+.header{
+    width: 100%;
+    height: 33.625em;
+    background: url('../images/mobile/image-header.jpg');
+    background-size: 100%;
+    background-position: bottom;
+    .nav{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 4em);
+        margin: 2em 1.5em;
+        &__logo{
+            display: flex;
+            align-items: center;
+        }
+        &__menu{
+            display:none;
+            flex-direction: column;
+            position:absolute;
+            margin-top:250px;
+            width: calc(100% - 4em);
+            background-color: $White;
+        }
+        
+        &__menu-icon{
+            font-size: 1.5rem;
+            color:white;
+        }
+        &__menu-check{
+            display: none;
+        }
+        &__menu-check:checked ~ .nav__menu{
+            display: flex;
+        }
+
+    }
+}
+
+
+.link{
+    &__text{
+        display:block;
+        font-size: 20px;
+        font-family: $Barlow;
+        letter-spacing: -.14px;
+        color: $VeryDarkGrayishBlue;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+.link--menu{
+    margin-bottom: 32px;
+}

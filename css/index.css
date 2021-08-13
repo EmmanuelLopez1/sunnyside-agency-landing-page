@@ -1,3 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+body {
+  font-size: 16px;
+}
 
+.header {
+  width: 100%;
+  height: 33.625em;
+  background: url("../images/mobile/image-header.jpg");
+  background-size: 100%;
+  background-position: bottom;
+}
+.header .nav {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 4em);
+  margin: 2em 1.5em;
+}
+.header .nav__logo {
+  display: flex;
+  align-items: center;
+}
+.header .nav__menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 250px;
+  width: calc(100% - 4em);
+  background-color: white;
+}
+.header .nav__menu-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+.header .nav__menu-check {
+  display: none;
+}
+.header .nav__menu-check:checked ~ .nav__menu {
+  display: flex;
+}
+
+.link__text {
+  display: block;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: -0.14px;
+  color: #5a636c;
+  text-decoration: none;
+  text-align: center;
+}
+
+.link--menu {
+  margin-bottom: 32px;
+}
 
 /*# sourceMappingURL=index.css.map */
