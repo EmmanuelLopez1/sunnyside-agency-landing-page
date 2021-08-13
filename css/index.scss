@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 
 //PRIMARY
 $Softred: hsl(7, 99%, 70%);
@@ -8,7 +7,6 @@ $Yellow: hsl(51, 100%, 49%);
 $DarkdesaturatedCyan: hsl(167, 40%, 24%);
 $DarkBlue: hsl(198, 62%, 26%);
 $DarkModeratCyan: hsl(168, 34%, 41%);
-
 
 //Neutral
 $VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
@@ -18,81 +16,171 @@ $GrayishBlue: hsl(210, 4%, 67%);
 $White: hsl(0, 0%, 100%);
 
 //Typography
-$Barlow: 'Barlow', sans-serif;
-$Barlow600: 600;
-$Fraunces:'Fraunces', serif;
-$Fraunces600: 600;
-$Fraunces900:900;
+$Barlow: "Barlow", sans-serif;
+$Fraunces: "Fraunces", serif;
+$bold: 600;
+$Fraunces900: 900;
 
-body{
-    font-size: 16px;
+body {
+  font-size: 16px;
+}
+//VARIABLES
+$contentWidth: calc(100% - 3rem);
+
+.header {
+  width: 100%;
+  height: 33.625em;
+  background: url("../images/mobile/image-header.jpg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  .nav {
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $contentWidth;
+    margin: 2rem 1.5rem 0em;
+    &__logo {
+      display: flex;
+      align-items: center;
+    }
+    &__menu {
+      display: flex;
+      padding: 3.9375em 0rem 2.4375em;
+      position: relative;
+      flex-direction: column;
+      position: absolute;
+      margin-top: 24.5625em;
+      width: 100%;
+      background-color: $White;
+      transform: scale(0);
+      transition: all 0.5s;
+    }
+    &__menu::before {
+      content: "";
+      display: block;
+      background: transparent;
+      position: absolute;
+      width: calc(100% - 1.25em);
+      height: 1px;
+      border-top: 1.25em solid transparent;
+      border-right: 1.25em solid white;
+      border-bottom: 1.25em solid transparent;
+      margin-top: -5.1875em;
+    }
+    &__menu-icon {
+      font-size: 1.5rem;
+      color: $White;
+    }
+    &__menu-check {
+      display: none;
+    }
+    &__menu-check:checked ~ .nav__menu {
+      transform: scale(1);
+    }
+  }
 }
 
-.header{
+.link {
+  &__text {
+    display: block;
+    font-size: 1.25em;
+    font-family: $Barlow;
+    letter-spacing: -0.14px;
+    text-decoration: none;
+    text-align: center;
+    color: $DarkGrayishBlue;
+  }
+}
+.link--menu {
+  margin-bottom: 2em;
+}
+
+.button {
+  width: 140px;
+  font-size: 16px;
+  padding: 1em 1.875em;
+  border-radius: 1.75em;
+  outline: none;
+  border: none;
+  margin: auto;
+  &__text {
+    margin: 0px;
+    font-size: 0.9375em;
+    font-family: $Fraunces;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $VeryDarkDesaturatedBlue;
+    letter-spacing: -0.107143px;
+  }
+}
+
+.button--menu-mobile {
+  background-color: $Yellow;
+}
+
+.image {
+  width: 100%;
+  &__img {
+    display: block;
     width: 100%;
-    height: 33.625em;
-    background: url('../images/mobile/image-header.jpg');
-    background-size: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    .nav{
-        position: relative;
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-        width: calc(100% - 3em);
-        margin: 2rem 1.5rem 0em;
-        &__logo{
-            display: flex;
-            align-items: center;
-        }
-        &__menu{
-            position:relative;
-            display:none;
-            flex-direction: column;
-            position:absolute;
-            margin-top:300px;
-            width: 100%;
-            background-color: $White;
-        }
-        &__menu::before{
-            content:'';
-            display:block;
-            background: transparent;
-            position: absolute;
-            width:calc(100% - 1.25em);
-            height:1px;
-            border-top: 20px solid transparent;
-            border-right: 20px solid white;
-            border-bottom: 20px solid transparent;
-            margin-top: -20px;
-        }
-        &__menu-icon{
-            font-size: 1.5rem;
-            color: $White;
-        }
-        &__menu-check{
-            display: none;
-        }
-        &__menu-check:checked ~ .nav__menu{
-            display: flex;
-        }
-
-    }
+  }
 }
 
-
-.link{
-    &__text{
-        display:block;
-        font-size: 20px;
-        font-family: $Barlow;
-        letter-spacing: -.14px;
-        color: $VeryDarkGrayishBlue;
-        text-decoration: none;
-        text-align: center;
-    }
+.title {
+  width: $contentWidth;
+  margin:0px auto 1.5em;
+  &__text {
+    margin: 0px;
+    font-size: 2em;
+    font-family: $Fraunces;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 39px;
+    text-align: center;
+    color: $VeryDarkDesaturatedBlue;
+  }
 }
-.link--menu{
-    margin-bottom: 32px;
+
+.title--underline {
+  position: relative;
+  margin: auto;
+  width: 8.5625em;
+  .title__text--underline {
+    text-transform: uppercase;
+    font-size: 0.9375em;
+  }
+  .underline {
+    position: absolute;
+    width: 100%;
+    height: 0.625em;
+    background-color: $Yellow;
+    opacity: 0.25;
+    border-radius: 1.75em;
+    margin-top: -1.0625em;
+    margin-bottom:2em;
+    z-index: -1;
+  }
+}
+
+.text {
+  font-size: 16px;
+  width: $contentWidth;
+  margin:0px auto 2em;
+  &__parraf {
+    margin: 0px;
+    font-family: $Barlow;
+    font-style: normal;
+    font-weight: $bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: -0.128571px;
+    color: $DarkGrayishBlue;
+  }
+}
+
+.card-info{
+    padding:4rem 0rem;
 }
