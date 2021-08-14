@@ -143,6 +143,14 @@ body {
   background-color: #fe7867;
 }
 
+.title--card {
+  display: inline-block;
+  margin-top: 34.25em;
+}
+.title--card-text {
+  font-size: 1.75em;
+}
+
 .text {
   font-size: 16px;
   width: calc(100% - 3rem);
@@ -153,15 +161,46 @@ body {
   font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125em;
   text-align: center;
-  line-height: 30px;
+  line-height: 1.875em;
   letter-spacing: -0.128571px;
   color: #818498;
 }
 
+.text--green {
+  color: #25564b;
+}
+
+.text--blue {
+  color: #19536b;
+}
+
+.text--card {
+  margin-bottom: 0px;
+}
+.text--card .text--card-parraf {
+  font-size: 1em;
+  line-height: 1.6875em;
+}
+
 .card-info {
   padding: 4rem 0rem;
+}
+
+.card-bg--strawbery {
+  background: url(../images/mobile/cerezas-bg.jpg);
+}
+
+.card-bg--orange {
+  background: url(../images/mobile/orange-bg.jpg);
+}
+
+.card-bg {
+  height: 46.875em;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=index.css.map */

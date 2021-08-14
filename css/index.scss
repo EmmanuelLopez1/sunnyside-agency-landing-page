@@ -128,9 +128,11 @@ $contentWidth: calc(100% - 3rem);
   }
 }
 
+//TITULOS
+
 .title {
   width: $contentWidth;
-  margin:0px auto 1.5em;
+  margin: 0px auto 1.5em;
   &__text {
     margin: 0px;
     font-size: 2em;
@@ -159,31 +161,75 @@ $contentWidth: calc(100% - 3rem);
     opacity: 0.25;
     border-radius: 1.75em;
     margin-top: -1.0625em;
-    margin-bottom:2em;
+    margin-bottom: 2em;
     z-index: -1;
   }
-  .underline--red{
-    background-color:$Softred;
+  .underline--red {
+    background-color: $Softred;
   }
 }
+
+.title--card{
+  display: inline-block;
+  margin-top: 34.25em;
+  &-text {
+    font-size: 1.75em;
+  }
+}
+
+//PARRAFOS
 
 .text {
   font-size: 16px;
   width: $contentWidth;
-  margin:0px auto 2em;
+  margin: 0px auto 2em;
   &__parraf {
     margin: 0px;
     font-family: $Barlow;
     font-style: normal;
     font-weight: $bold;
-    font-size: 18px;
+    font-size: 1.125em;
     text-align: center;
-    line-height: 30px;
+    line-height: 1.875em;
     letter-spacing: -0.128571px;
     color: $DarkGrayishBlue;
   }
 }
-
-.card-info{
-    padding:4rem 0rem;
+.text--green{
+  color:$DarkdesaturatedCyan;
 }
+.text--blue{
+  color:$DarkBlue;
+}
+
+.text--card{
+  margin-bottom: 0px;
+  .text--card-parraf {
+    font-size: 1em;
+    line-height: 1.6875em;
+  }
+}
+
+//TARJETAS CON FONDO
+
+.card-info {
+  padding: 4rem 0rem;
+}
+.card-bg--strawbery{
+  background: url(../images/mobile/cerezas-bg.jpg);
+}
+.card-bg--orange{
+  background: url(../images/mobile/orange-bg.jpg);
+}
+
+.card-bg {
+  height: 46.875em;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+//TESTIMONIOS
+
+
+
