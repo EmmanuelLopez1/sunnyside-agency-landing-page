@@ -20,10 +20,6 @@ body {
   width: calc(100% - 3rem);
   margin: 2rem 1.5rem 0em;
 }
-.header .nav__logo {
-  display: flex;
-  align-items: center;
-}
 .header .nav__menu {
   display: flex;
   padding: 3.9375em 0rem 2.4375em;
@@ -57,6 +53,11 @@ body {
 }
 .header .nav__menu-check:checked ~ .nav__menu {
   transform: scale(1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .link__text {
@@ -114,7 +115,7 @@ body {
   font-family: "Fraunces", serif;
   font-style: normal;
   font-weight: 900;
-  line-height: 39px;
+  line-height: 2.4375em;
   text-align: center;
   color: #23303e;
 }
@@ -145,7 +146,8 @@ body {
 
 .title--card {
   display: inline-block;
-  margin-top: 34.25em;
+  width: 100%;
+  margin: 34.25em auto 0px;
 }
 .title--card-text {
   font-size: 1.75em;
@@ -163,18 +165,18 @@ body {
 }
 
 .title--card-testimonial {
-  margin-bottom: 9px;
+  margin-bottom: 0.5625em;
 }
 
 .title--testimonial-info {
   font-family: "Fraunces", serif;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.125em;
+  line-height: 1.375em;
   color: #23303e;
 }
 
 .text {
-  font-size: 16px;
+  font-size: 1em;
   width: calc(100% - 3rem);
   margin: 0px auto 2em;
 }
@@ -207,15 +209,15 @@ body {
 }
 
 .text--testimonial {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 1em;
+  line-height: 2em;
   color: #5a636c;
 }
 
 .text--testimonial-job {
-  font-size: 14px;
-  line-height: 25px;
-  letter-spacing: -0.1px;
+  font-size: 0.875em;
+  line-height: 1.5625em;
+  letter-spacing: -0.0063em;
   color: #818498;
 }
 
@@ -239,8 +241,12 @@ body {
 }
 
 .testimonials {
+  font-size: 24px;
   width: calc(100% - 3rem);
-  margin: 4em auto 0px;
+  margin: 4em auto 0em;
+}
+.testimonials .testimonial {
+  margin-bottom: 4rem;
 }
 .testimonials .testimonial__img {
   width: 4.5em;
@@ -249,6 +255,19 @@ body {
   margin: auto;
   border-radius: 100%;
   margin-bottom: 2em;
+}
+
+.galery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.galery .image {
+  width: 50%;
+}
+
+.footer {
+  background-color: #458c7e;
 }
 
 /*# sourceMappingURL=index.css.map */

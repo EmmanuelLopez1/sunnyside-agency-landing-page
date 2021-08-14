@@ -41,10 +41,6 @@ $contentWidth: calc(100% - 3rem);
     align-items: center;
     width: $contentWidth;
     margin: 2rem 1.5rem 0em;
-    &__logo {
-      display: flex;
-      align-items: center;
-    }
     &__menu {
       display: flex;
       padding: 3.9375em 0rem 2.4375em;
@@ -80,6 +76,10 @@ $contentWidth: calc(100% - 3rem);
       transform: scale(1);
     }
   }
+}
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .link {
@@ -139,7 +139,7 @@ $contentWidth: calc(100% - 3rem);
     font-family: $Fraunces;
     font-style: normal;
     font-weight: 900;
-    line-height: 39px;
+    line-height: 2.4375em;
     text-align: center;
     color: $VeryDarkDesaturatedBlue;
   }
@@ -171,7 +171,8 @@ $contentWidth: calc(100% - 3rem);
 
 .title--card {
   display: inline-block;
-  margin-top: 34.25em;
+  width: 100%;
+  margin: 34.25em auto 0px;
   &-text {
     font-size: 1.75em;
   }
@@ -189,20 +190,20 @@ $contentWidth: calc(100% - 3rem);
 }
 
 .title--card-testimonial {
-  margin-bottom: 9px;
+  margin-bottom: 0.5625em;
 }
 
 .title--testimonial-info {
   font-family: $Fraunces;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.125em;
+  line-height: 1.375em;
   color:$VeryDarkDesaturatedBlue;
 }
 
 //PARRAFOS
 
 .text {
-  font-size: 16px;
+  font-size: 1em;
   width: $contentWidth;
   margin: 0px auto 2em;
   &__parraf {
@@ -233,15 +234,15 @@ $contentWidth: calc(100% - 3rem);
 }
 
 .text--testimonial {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 1em;
+  line-height: 2em;
   color: $VeryDarkGrayishBlue;
 }
 
 .text--testimonial-job {
-  font-size: 14px;
-  line-height: 25px;
-  letter-spacing: -0.1px;
+  font-size: 0.875em;
+  line-height: 1.5625em;
+  letter-spacing: -0.0063em;
   color: $DarkGrayishBlue;
 }
 
@@ -266,9 +267,11 @@ $contentWidth: calc(100% - 3rem);
 
 //TESTIMONIOS
 .testimonials {
+  font-size: 24px;
   width: $contentWidth;
-  margin: 4em auto 0px;
+  margin: 4em auto 0em;
   .testimonial {
+    margin-bottom: 4rem;
     &__img {
       width: 4.5em;
       height: 4.5em;
@@ -278,4 +281,19 @@ $contentWidth: calc(100% - 3rem);
       margin-bottom: 2em;
     }
   }
+}
+
+//GALERIA
+.galery{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  .image{
+    width:50%;
+  }
+}
+
+//FOOTER
+.footer{
+  background-color:$DarkModeratCyan;
 }
