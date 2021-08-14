@@ -139,6 +139,9 @@ body {
   margin-bottom: 2em;
   z-index: -1;
 }
+.title--underline .underline--red {
+  background-color: #fe7867;
+}
 
 .text {
   font-size: 16px;

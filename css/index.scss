@@ -162,6 +162,9 @@ $contentWidth: calc(100% - 3rem);
     margin-bottom:2em;
     z-index: -1;
   }
+  .underline--red{
+    background-color:$Softred;
+  }
 }
 
 .text {
