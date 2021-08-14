@@ -19,7 +19,7 @@ $White: hsl(0, 0%, 100%);
 $Barlow: "Barlow", sans-serif;
 $Fraunces: "Fraunces", serif;
 $bold: 600;
-$Fraunces900: 900;
+$bolder: 900;
 
 body {
   font-size: 16px;
@@ -169,12 +169,34 @@ $contentWidth: calc(100% - 3rem);
   }
 }
 
-.title--card{
+.title--card {
   display: inline-block;
   margin-top: 34.25em;
   &-text {
     font-size: 1.75em;
   }
+}
+
+.title--testimonials {
+  margin-bottom: 4em;
+  .title__text--testimonials {
+    font-size: 1em;
+    line-height: 1.25em;
+    letter-spacing: 0.25em;
+    color: $DarkGrayishBlue;
+    text-transform: uppercase;
+  }
+}
+
+.title--card-testimonial {
+  margin-bottom: 9px;
+}
+
+.title--testimonial-info {
+  font-family: $Fraunces;
+  font-size: 18px;
+  line-height: 22px;
+  color:$VeryDarkDesaturatedBlue;
 }
 
 //PARRAFOS
@@ -195,14 +217,14 @@ $contentWidth: calc(100% - 3rem);
     color: $DarkGrayishBlue;
   }
 }
-.text--green{
-  color:$DarkdesaturatedCyan;
+.text--green {
+  color: $DarkdesaturatedCyan;
 }
-.text--blue{
-  color:$DarkBlue;
+.text--blue {
+  color: $DarkBlue;
 }
 
-.text--card{
+.text--card {
   margin-bottom: 0px;
   .text--card-parraf {
     font-size: 1em;
@@ -210,15 +232,28 @@ $contentWidth: calc(100% - 3rem);
   }
 }
 
+.text--testimonial {
+  font-size: 16px;
+  line-height: 32px;
+  color: $VeryDarkGrayishBlue;
+}
+
+.text--testimonial-job {
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: -0.1px;
+  color: $DarkGrayishBlue;
+}
+
 //TARJETAS CON FONDO
 
 .card-info {
   padding: 4rem 0rem;
 }
-.card-bg--strawbery{
+.card-bg--strawbery {
   background: url(../images/mobile/cerezas-bg.jpg);
 }
-.card-bg--orange{
+.card-bg--orange {
   background: url(../images/mobile/orange-bg.jpg);
 }
 
@@ -230,6 +265,17 @@ $contentWidth: calc(100% - 3rem);
 }
 
 //TESTIMONIOS
-
-
-
+.testimonials {
+  width: $contentWidth;
+  margin: 4em auto 0px;
+  .testimonial {
+    &__img {
+      width: 4.5em;
+      height: 4.5em;
+      display: block;
+      margin: auto;
+      border-radius: 100%;
+      margin-bottom: 2em;
+    }
+  }
+}
