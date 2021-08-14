@@ -7,6 +7,7 @@ $Yellow: hsl(51, 100%, 49%);
 $DarkdesaturatedCyan: hsl(167, 40%, 24%);
 $DarkBlue: hsl(198, 62%, 26%);
 $DarkModeratCyan: hsl(168, 34%, 41%);
+$footerBg: #90d4c6;
 
 //Neutral
 $VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
@@ -26,10 +27,46 @@ body {
 }
 //VARIABLES
 $contentWidth: calc(100% - 3rem);
+.title {
+  width: $contentWidth;
+  margin: 0px auto 1.5em;
+  &__text {
+    margin: 0px;
+    font-size: 2em;
+    font-family: $Fraunces;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2.4375em;
+    text-align: center;
+    color: $VeryDarkDesaturatedBlue;
+  }
+}
+.text {
+  font-size: 1em;
+  width: $contentWidth;
+  margin: 0px auto 2em;
+  &__parraf {
+    margin: 0px;
+    font-family: $Barlow;
+    font-style: normal;
+    font-weight: $bold;
+    font-size: 1.125em;
+    text-align: center;
+    line-height: 1.875em;
+    letter-spacing: -0.128571px;
+    color: $DarkGrayishBlue;
+  }
+}
+.arrow {
+  display: block;
+  margin: 52px auto 0px;
+  height: 107px;
+  // background-color:red;
+}
 
 .header {
   width: 100%;
-  height: 33.625em;
+  height: 690px;
   background: url("../images/mobile/image-header.jpg");
   background-size: 100%;
   background-position: bottom;
@@ -87,6 +124,7 @@ $contentWidth: calc(100% - 3rem);
     display: block;
     font-size: 1.25em;
     font-family: $Barlow;
+    font-weight: $bold;
     letter-spacing: -0.14px;
     text-decoration: none;
     text-align: center;
@@ -130,18 +168,16 @@ $contentWidth: calc(100% - 3rem);
 
 //TITULOS
 
-.title {
-  width: $contentWidth;
-  margin: 0px auto 1.5em;
-  &__text {
-    margin: 0px;
-    font-size: 2em;
-    font-family: $Fraunces;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 2.4375em;
+.title--header {
+  margin: 5.5em auto 0em;
+  width: 20.4375em;
+  .title__text--header {
+    font-size: 2.5em;
+    line-height: 3.0625rem;
     text-align: center;
-    color: $VeryDarkDesaturatedBlue;
+    text-transform: uppercase;
+    letter-spacing: 0.3906rem;
+    color: $White;
   }
 }
 
@@ -197,27 +233,11 @@ $contentWidth: calc(100% - 3rem);
   font-family: $Fraunces;
   font-size: 1.125em;
   line-height: 1.375em;
-  color:$VeryDarkDesaturatedBlue;
+  color: $VeryDarkDesaturatedBlue;
 }
 
 //PARRAFOS
 
-.text {
-  font-size: 1em;
-  width: $contentWidth;
-  margin: 0px auto 2em;
-  &__parraf {
-    margin: 0px;
-    font-family: $Barlow;
-    font-style: normal;
-    font-weight: $bold;
-    font-size: 1.125em;
-    text-align: center;
-    line-height: 1.875em;
-    letter-spacing: -0.128571px;
-    color: $DarkGrayishBlue;
-  }
-}
 .text--green {
   color: $DarkdesaturatedCyan;
 }
@@ -259,7 +279,7 @@ $contentWidth: calc(100% - 3rem);
 }
 
 .card-bg {
-  height: 46.875em;
+  height: 46.875rem;
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
@@ -284,16 +304,80 @@ $contentWidth: calc(100% - 3rem);
 }
 
 //GALERIA
-.galery{
-  width:100%;
+.galery {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  .image{
-    width:50%;
+  .image {
+    width: 50%;
   }
 }
 
 //FOOTER
-.footer{
-  background-color:$DarkModeratCyan;
+.footer {
+  background-color: $footerBg;
+  padding: 4em 0rem 5em;
+  .logo--footer__svg {
+    display: block;
+    margin: auto;
+    transform: scale(1.4);
+  }
+  .logo--footer__img {
+    fill: $DarkdesaturatedCyan;
+  }
+  &__menu {
+    display: flex;
+    width: 18.5625em;
+    height: 1.5625em;
+    margin: 2.5em auto 0rem;
+    justify-content: space-between;
+    .link__text--footer {
+      font-size: 18px;
+      color: $DarkModeratCyan;
+    }
+  }
+  &__socials {
+    width: 164px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: auto;
+    background: url(../images/desktop/image-header.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    .nav {
+      position: static;
+      &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        flex-direction: row;
+        position: static;
+        margin-top: 0px;
+        width: 435px;
+        background-color: transparent;
+        transform: scale(1);
+      }
+      &__label{
+        display:none;
+      }
+      .button {
+        margin: 0px;  
+      }
+      .link {
+        margin-bottom: 0px;
+        &__text{
+
+        }
+      }
+    }
+  }
 }
