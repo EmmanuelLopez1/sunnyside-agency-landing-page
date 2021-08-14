@@ -100,7 +100,7 @@ body {
 
 .link__text {
   display: block;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   letter-spacing: -0.14px;
@@ -318,8 +318,51 @@ body {
 }
 
 @media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards .image {
+    width: 50%;
+  }
+  .cards .card-info {
+    width: 50%;
+    padding: 0px;
+  }
+  .cards .card-info .title {
+    margin: 20px auto;
+  }
+  .cards .card-info .title__text {
+    line-height: 30px;
+  }
+  .cards .card-info .text {
+    margin-bottom: 40px;
+  }
+  .cards .card-bg {
+    width: 50%;
+  }
+  .cards .card-brand {
+    order: 1;
+  }
+  .cards .image-egg {
+    order: 2;
+  }
+  .cards .image-glass {
+    order: 3;
+  }
+  .cards .card-audience {
+    order: 4;
+  }
+  .cards .card-bg--strawbery {
+    order: 5;
+  }
+  .cards .card-bg--orange {
+    order: 6;
+  }
+}
+@media (min-width: 1024px) {
   .header {
-    height: auto;
+    height: 570px;
     background: url(../images/desktop/image-header.jpg);
     background-size: 100%;
     background-position: center;
@@ -340,14 +383,30 @@ body {
     background-color: transparent;
     transform: scale(1);
   }
+  .header .nav__menu::before {
+    display: none;
+  }
   .header .nav__label {
     display: none;
   }
   .header .nav .button {
     margin: 0px;
+    background-color: white;
+  }
+  .header .nav .button__text {
+    color: #23303e;
   }
   .header .nav .link {
     margin-bottom: 0px;
+  }
+  .header .nav .link__text {
+    font-size: 1.125em;
+    color: white;
+  }
+}
+@media (min-width: 1300px) {
+  .header {
+    height: 800px;
   }
 }
 
