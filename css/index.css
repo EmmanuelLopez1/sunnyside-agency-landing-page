@@ -426,6 +426,10 @@ body {
   .cards .text__parraf {
     text-align: start;
   }
+
+  .testimonials__cards {
+    display: flex;
+  }
 }
 @media (min-width: 1500px) {
   .header {

@@ -461,6 +461,9 @@ $contentWidth: calc(100% - 3rem);
       text-align: start;
     }
   }
+  .testimonials__cards{
+    display: flex;
+  }
 }
 
 @media(min-width:1500px){
